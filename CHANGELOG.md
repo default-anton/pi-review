@@ -1,0 +1,40 @@
+# Changelog
+
+All notable changes to `pi-review` are documented here.
+
+## Format
+
+- Keep `## [Unreleased]` at the top.
+- Use release headers as `## [X.Y.Z] - YYYY-MM-DD`.
+- Group entries under `### Added`, `### Changed`, `### Fixed` (optionally `### Removed` / `### Security`).
+- Keep entries short and operator/user-facing.
+
+## [Unreleased]
+
+### Added
+
+- None.
+
+### Changed
+
+- None.
+
+### Fixed
+
+- None.
+
+## [1.0.0] - 2026-04-27
+
+### Added
+
+- Initial public release of the `/review` pi extension.
+- Added new-branch maintainer review flow with conversation context, optional focus text, and temporary high-thinking mode.
+- Added npm trusted-publishing release workflow, release validation scripts, and release runbook.
+
+### Changed
+
+- None.
+
+### Fixed
+
+- None.

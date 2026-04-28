@@ -1,0 +1,48 @@
+{
+  "name": "pi-review",
+  "version": "1.0.0",
+  "description": "Review current pi work in a new branch with conversation context",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "review",
+    "code-review"
+  ],
+  "license": "MIT",
+  "author": "Anton Kuzmenko <hotk@hey.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/default-anton/pi-review.git"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "check": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "release:verify-tag": "node scripts/verify-release-tag.mjs",
+    "release:notes": "node scripts/changelog-release-notes.mjs",
+    "release:gate": "npm run check && npm run build"
+  },
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.69.0"
+  },
+  "devDependencies": {
+    "@mariozechner/pi-coding-agent": "^0.69.0",
+    "@types/node": "^25.0.10",
+    "typescript": "^5.0.0"
+  }
+}
