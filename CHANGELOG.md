@@ -28,6 +28,7 @@ All notable changes to `pi-review` are documented here.
 ### Added
 
 - Initial public release of the `/review` pi extension.
+- Added a README preview screenshot showing example review findings and recommendations.
 - Added new-branch maintainer review flow with conversation context, optional focus text, and temporary high-thinking mode.
 - Added npm trusted-publishing release workflow, release validation scripts, and release runbook.
 

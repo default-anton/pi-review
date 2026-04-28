@@ -2,6 +2,10 @@
 
 Run a strict maintainer review in a new [pi](https://github.com/badlogic/pi-mono) coding agent branch.
 
+## Preview
+
+![Example pi-review output showing prioritized findings and recommendations](assets/review-output.png)
+
 ## What it does
 
 Adds a `/review` command that starts a new branch from the current conversation and asks pi to review the available work. The review includes user and assistant conversation messages from the current branch, with thinking and tool calls removed.
