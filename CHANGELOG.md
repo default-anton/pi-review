@@ -17,7 +17,7 @@ All notable changes to `pi-review` are documented here.
 
 ### Changed
 
-- None.
+- Updated review instructions to check completeness against stated task requirements and acceptance criteria.
 
 ### Fixed
 

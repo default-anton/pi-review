@@ -10,6 +10,7 @@ type ThinkingLevel = ReturnType<ExtensionAPI["getThinkingLevel"]>;
 const REVIEW_INSTRUCTION = `Review the available work and context.
 Put your strict maintainer hat on.
 Find concrete, high-confidence, material issues introduced by the work or revealed by the additional context.
+Verify completeness against the stated task, requirements, and acceptance criteria; flag missing or partially implemented requirements as findings.
 Focus on correctness, security, performance, operability, and maintainability.
 Do not speculate; point to the affected behavior, invariant, or code path.
 Prefer issues the author would likely fix before merge.
