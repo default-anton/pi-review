@@ -24,6 +24,7 @@ export async function sendMessageInNewBranch(
   branch: SessionEntry[],
   message: string,
   purpose: string,
+  beforeSend?: () => void,
 ): Promise<boolean> {
   const targetId = getEmptyBranchTargetId(branch);
   if (targetId) {
@@ -34,6 +35,7 @@ export async function sendMessageInNewBranch(
     }
   }
 
+  beforeSend?.();
   pi.sendUserMessage(message);
 
   if (ctx.hasUI) ctx.ui.notify(`Started ${purpose} branch`, "info");

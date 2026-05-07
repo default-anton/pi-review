@@ -13,7 +13,7 @@ All notable changes to `pi-review` are documented here.
 
 ### Added
 
-- None.
+- Added `/review-back` to return to the reviewed branch with the review findings prefilled in the editor.
 
 ### Changed
 

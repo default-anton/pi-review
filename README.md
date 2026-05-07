@@ -36,6 +36,12 @@ Add optional focus text:
 /review focus on release safety and backward compatibility
 ```
 
+After the review finishes, return to the reviewed branch and prefill the editor with the review findings:
+
+```text
+/review-back
+```
+
 ## How it works
 
 1. Waits for the current agent turn to finish if needed
@@ -44,6 +50,7 @@ Add optional focus text:
 4. Creates a new branch from the current conversation
 5. Sends a maintainer-style review prompt with optional focus text
 6. Restores your previous thinking level when the review turn ends
+7. `/review-back` returns to the reviewed branch and puts the review findings in the editor
 
 ## Review output
 
