@@ -2,7 +2,7 @@ import type {
   ExtensionAPI,
   ExtensionCommandContext,
   SessionEntry,
-} from "@mariozechner/pi-coding-agent";
+} from "@earendil-works/pi-coding-agent";
 
 function getEmptyBranchTargetId(branch: SessionEntry[]): string | undefined {
   for (const entry of branch) {

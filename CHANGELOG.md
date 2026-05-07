@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.1.1] - 2026-05-07
+
+### Added
+
+- None.
+
+### Changed
+
+- Switched the pi coding-agent imports and dependencies to the `@earendil-works` scope at `^0.74.0`.
+
+### Fixed
+
+- None.
+
 ## [1.1.0] - 2026-05-07
 
 ### Added

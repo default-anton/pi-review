@@ -1,6 +1,6 @@
 {
   "name": "pi-review",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Review current pi work in a new branch with conversation context",
   "type": "module",
   "keywords": [
@@ -39,10 +39,10 @@
     ]
   },
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "^0.69.0"
+    "@earendil-works/pi-coding-agent": "^0.74.0"
   },
   "devDependencies": {
-    "@mariozechner/pi-coding-agent": "^0.69.0",
+    "@earendil-works/pi-coding-agent": "^0.74.0",
     "@types/node": "^25.0.10",
     "typescript": "^5.0.0"
   }
