@@ -1,6 +1,6 @@
 {
   "name": "pi-review",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Review current pi work in a new branch with conversation context",
   "type": "module",
   "keywords": [

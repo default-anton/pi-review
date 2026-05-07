@@ -17,6 +17,20 @@ All notable changes to `pi-review` are documented here.
 
 ### Changed
 
+- None.
+
+### Fixed
+
+- None.
+
+## [1.0.1] - 2026-05-06
+
+### Added
+
+- None.
+
+### Changed
+
 - Updated review instructions to check completeness against stated task requirements and acceptance criteria.
 - Updated review instructions to avoid stopping after the first few findings and perform a final missed-issue pass.
 
