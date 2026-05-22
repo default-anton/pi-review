@@ -17,6 +17,20 @@ All notable changes to `pi-review` are documented here.
 
 ### Changed
 
+- None.
+
+### Fixed
+
+- None.
+
+## [1.1.2] - 2026-05-21
+
+### Added
+
+- None.
+
+### Changed
+
 - Added tighter subagent-based review orchestration for large or context-heavy changes.
 
 ### Fixed
