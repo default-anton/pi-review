@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.1.3] - 2026-06-12
+
+### Added
+
+- None.
+
+### Changed
+
+- Added a validation pass to challenge candidate review findings before reporting them.
+
+### Fixed
+
+- None.
+
 ## [1.1.2] - 2026-05-21
 
 ### Added
