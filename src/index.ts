@@ -28,8 +28,8 @@ Delegate tightly scoped repo-local research on relevant pre-existing subsystems,
 2. Focused review:
 Delegate one or more scoped reviews using the review surface, relevant reconnaissance note paths, and the shared review backbone below. Include the shared review backbone in each focused review prompt. Scope by subsystem, changed area, risk dimension, acceptance criterion, cross-cutting impact, or hypothesis. Allow intentional overlap when risk justifies it, but avoid accidental duplicate work. Focused review subagents must not modify source, tests, config, docs, or generated files; they may only write temporary markdown notes/reports.
 
-3. Validation:
-Before reporting, challenge each candidate finding against the actual code path and surrounding context. Drop false positives, duplicates, out-of-scope concerns, and issues that rely on unsupported assumptions or are already handled by guards, call sites, defaults, tests, or documented contracts. Keep only material findings with concrete affected behavior and an actionable fix.
+3. Adversarial validation:
+Challenge each candidate finding against the actual code path and surrounding context. For broad, high-risk, subtle, or uncertain findings, delegate tightly scoped validators to try to disprove specific candidates using guards, call sites, defaults, tests, documented contracts, and relevant invariants. Validators must not modify source, tests, config, docs, or generated files; they may only write temporary markdown notes/reports. Drop false positives, duplicates, out-of-scope concerns, and unsupported assumptions. Keep only material findings with concrete affected behavior and an actionable fix.
 
 Shared review backbone for you and focused review subagents:
 Put your strict maintainer hat on.

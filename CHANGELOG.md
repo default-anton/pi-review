@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.1.4] - 2026-06-23
+
+### Added
+
+- None.
+
+### Changed
+
+- Tightened review validation instructions to use adversarial validators for uncertain or high-risk findings.
+
+### Fixed
+
+- None.
+
 ## [1.1.3] - 2026-06-12
 
 ### Added
