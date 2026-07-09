@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.1.5] - 2026-07-09
+
+### Added
+
+- None.
+
+### Changed
+
+- Increased the default review thinking level to `xhigh` for deeper analysis.
+
+### Fixed
+
+- None.
+
 ## [1.1.4] - 2026-06-23
 
 ### Added

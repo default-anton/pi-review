@@ -7,7 +7,7 @@ import {
   formatConversation,
 } from "./lib/conversation-context.js";
 
-const REVIEW_THINKING_LEVEL = "high";
+const REVIEW_THINKING_LEVEL = "xhigh";
 const REVIEW_METADATA_TYPE = "pi-review";
 
 type ThinkingLevel = ReturnType<ExtensionAPI["getThinkingLevel"]>;
