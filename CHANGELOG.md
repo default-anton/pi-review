@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.1.6] - 2026-07-10
+
+### Added
+
+- None.
+
+### Changed
+
+- Restored the default review thinking level to `high`.
+
+### Fixed
+
+- None.
+
 ## [1.1.5] - 2026-07-09
 
 ### Added
