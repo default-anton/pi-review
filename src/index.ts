@@ -26,7 +26,7 @@ First identify the review surface: current diff, uncommitted changes, conversati
 When using subagents:
 
 1. Reconnaissance:
-Delegate tightly scoped repo-local research on relevant pre-existing subsystems, invariants, interfaces, tests, edge cases, and risk areas. Reconnaissance subagents must not modify source, tests, config, docs, or generated files; they may only write concise markdown notes/reports in a temporary review area and return the note path plus a terse summary.
+Delegate tightly scoped repo-local research on relevant pre-existing subsystems, invariants, interfaces, tests, edge cases, and risk areas. Reconnaissance subagents must not modify source, tests, config, docs, or generated files; they may only write markdown notes/reports in a temporary review area and return the note path plus a summary.
 
 2. Focused review:
 Delegate one or more scoped reviews using the review surface, relevant reconnaissance note paths, and the shared review backbone below. Include the shared review backbone in each focused review prompt. Scope by subsystem, changed area, risk dimension, acceptance criterion, cross-cutting impact, or hypothesis. Allow intentional overlap when risk justifies it, but avoid accidental duplicate work. Focused review subagents must not modify source, tests, config, docs, or generated files; they may only write temporary markdown notes/reports.
@@ -45,7 +45,7 @@ Prefer issues the author would likely fix before merge.
 Assume existing interfaces and behavior should remain backward compatible unless the user or project instructions explicitly say otherwise.
 If nothing material stands out in the assigned scope, say \`looks good\`; otherwise return numbered findings sorted by priority.
 Use [P0] for certain severe breakage, data loss, or security issues; [P1] for likely user-facing breakage or major regressions; [P2] for limited-scope correctness, performance, or maintainability issues; [P3] for minor but real issues.
-For each finding, include a [P0]-[P3] tag, location, a concise summary, a concise explanation of the affected behavior, invariant, or code path, and \`Recommendation:\` with the top specific, actionable fix, stated concisely.
+For each finding, include a [P0]-[P3] tag, location, a summary, an explanation of the affected behavior, invariant, or code path, and \`Recommendation:\` with the top specific, actionable fix.
 
 After subagents return, read their notes/reports, deduplicate findings, resolve obvious conflicts, preserve legitimate findings, and synthesize the final review. Scale subagent count to context and risk, not file count. Do not fully re-review every subagent finding unless it is internally inconsistent, unsupported, or contradicted by other evidence. Do one final missed-issue pass over the overall review surface before answering. Do not expose orchestration details unless needed to understand a finding.
 

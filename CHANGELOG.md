@@ -17,7 +17,7 @@ All notable changes to `pi-review` are documented here.
 
 ### Changed
 
-- None.
+- Removed explicit brevity constraints from reviewer output instructions.
 
 ### Fixed
 
