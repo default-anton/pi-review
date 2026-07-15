@@ -18,6 +18,7 @@ All notable changes to `pi-review` are documented here.
 ### Changed
 
 - Removed explicit brevity constraints from reviewer output instructions.
+- Allowed adversarial validators to return findings without writing temporary reports.
 
 ### Fixed
 
