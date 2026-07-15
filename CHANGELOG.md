@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.2.0] - 2026-07-14
+
+### Added
+
+- Added persistent global and project configuration for the review thinking level.
+
+### Changed
+
+- None.
+
+### Fixed
+
+- None.
+
 ## [1.1.6] - 2026-07-10
 
 ### Added

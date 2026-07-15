@@ -42,11 +42,25 @@ After the review finishes, return to the reviewed branch and prefill the editor 
 /review-back
 ```
 
+## Configuration
+
+The review thinking level defaults to `high`. Set it globally in `~/.pi/agent/pi-review.json`:
+
+```json
+{
+  "thinkingLevel": "medium"
+}
+```
+
+Override it for a project in `<project>/.pi/pi-review.json`. Project configuration takes precedence over global configuration.
+
+Supported values are `off`, `minimal`, `low`, `medium`, `high`, `xhigh`, and `max`. Pi may clamp the configured level to the active model's capabilities.
+
 ## How it works
 
 1. Waits for the current agent turn to finish if needed
 2. Extracts user and assistant text from the active branch
-3. Switches thinking level to `high` for the review turn
+3. Switches to the configured review thinking level for the review turn
 4. Creates a new branch from the current conversation
 5. Sends a maintainer-style review prompt with optional focus text
 6. Restores your previous thinking level when the review turn ends

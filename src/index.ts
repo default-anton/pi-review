@@ -6,11 +6,14 @@ import {
   extractLatestAssistantText,
   formatConversation,
 } from "./lib/conversation-context.js";
+import {
+  DEFAULT_REVIEW_THINKING_LEVEL,
+  loadReviewConfig,
+  type ThinkingLevel,
+} from "./lib/review-config.js";
 
-const REVIEW_THINKING_LEVEL = "high";
 const REVIEW_METADATA_TYPE = "pi-review";
 
-type ThinkingLevel = ReturnType<ExtensionAPI["getThinkingLevel"]>;
 type ReviewMetadata = {
   kind: "review";
   reviewedLeafId: string;
@@ -105,6 +108,7 @@ function buildReviewBackEditorText(reviewReport: string): string {
 
 export default function reviewExtension(pi: ExtensionAPI) {
   let originalThinkingLevel: ThinkingLevel | undefined;
+  let reviewThinkingLevel = DEFAULT_REVIEW_THINKING_LEVEL;
 
   function restoreThinkingLevel(): void {
     if (!originalThinkingLevel) return;
@@ -112,6 +116,19 @@ export default function reviewExtension(pi: ExtensionAPI) {
     pi.setThinkingLevel(originalThinkingLevel);
     originalThinkingLevel = undefined;
   }
+
+  pi.on("session_start", (_event, ctx) => {
+    const config = loadReviewConfig(ctx.cwd);
+    reviewThinkingLevel = config.thinkingLevel;
+
+    for (const warning of config.warnings) {
+      if (ctx.hasUI) {
+        ctx.ui.notify(warning, "warning");
+      } else {
+        console.error(warning);
+      }
+    }
+  });
 
   pi.on("agent_end", () => {
     restoreThinkingLevel();
@@ -132,9 +149,9 @@ export default function reviewExtension(pi: ExtensionAPI) {
       const reviewMessage = buildReviewMessage(args, conversationXml);
 
       const currentThinkingLevel = pi.getThinkingLevel();
-      if (currentThinkingLevel !== REVIEW_THINKING_LEVEL) {
+      if (currentThinkingLevel !== reviewThinkingLevel) {
         originalThinkingLevel = currentThinkingLevel;
-        pi.setThinkingLevel(REVIEW_THINKING_LEVEL);
+        pi.setThinkingLevel(reviewThinkingLevel);
       }
 
       let started = false;
