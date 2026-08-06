@@ -23,6 +23,20 @@ All notable changes to `pi-review` are documented here.
 
 - None.
 
+## [1.2.2] - 2026-08-06
+
+### Added
+
+- None.
+
+### Changed
+
+- Updated the supported Pi coding-agent version to 0.84.
+
+### Fixed
+
+- None.
+
 ## [1.2.1] - 2026-07-15
 
 ### Added
